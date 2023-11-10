@@ -1,0 +1,54 @@
+/* Make sure you have Tailwind CSS installed and properly configured in your project */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Make sure you've properly configured your base styles, components, and utilities in your Tailwind CSS configuration */
+
+@layer base {
+    section {
+        @apply py-8; /* Use numeric values directly for spacing */
+    }
+}
+
+@layer components {
+    .container {
+        @apply max-w-full w-[1440px] px-5 mx-auto; /* Remove extra space between w and - */
+    }
+
+    .btn {
+        @apply bg-primaryColor py-3 px-5 rounded-full text-white font-semibold mt-4; /* Use numeric values directly for spacing and adjust font weight value */
+    }
+
+    .heading {
+        @apply text-4xl font-bold text-headingColor; /* Use standard font size notation and adjust leading value */
+    }
+
+    .text_para {
+        @apply text-base leading-7 font-normal text-textColor mt-4; /* Use standard font size notation and adjust leading value */
+    }
+
+    /* Apply background image to the header */ 
+    .header {
+        background-image: url('./assets/images/mask.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+
+    }
+    
+    .hero_section {
+        @apply bg-[url('./assets/images/hero-bg.png')] bg-no-repeat bg-center bg-cover;
+        
+    }
+} 
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        @apply w-full;
+    }
+}
